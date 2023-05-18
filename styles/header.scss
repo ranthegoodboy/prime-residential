@@ -1,0 +1,28 @@
+.cart-text {
+  @apply font-black text-3xl md:text-4xl lg:text-3xl;
+}
+
+.job-packs-text {
+  @apply font-black text-3xl md:text-4xl lg:text-5xl;
+}
+
+.job-packs-subtext {
+  @apply font-bold text-base md:text-lg lg:text-xl;
+}
+
+.dash-cart-icon,
+.dash-user-icon {
+  @apply flex items-center rounded-md cursor-pointer;
+}
+
+.dash-cart-icon {
+  @apply py-3 px-4 bg-[#fbd006] relative;
+
+  .dash-cart-count {
+    @apply absolute py-[5px] px-[10px] flex justify-center items-center text-xs text-white bg-[#021230] rounded-full top-[-10px] right-[-10px];
+  }
+}
+
+.dash-user-icon {
+  @apply py-3 px-4 bg-[#dcdcdc];
+}

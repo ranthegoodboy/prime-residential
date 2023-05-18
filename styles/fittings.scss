@@ -1,0 +1,75 @@
+.fittings-wrapper {
+  @apply columns-1 md:columns-2 lg:columns-3 mb-10 gap-5;
+}
+
+.fitting-card {
+  @apply mb-5 inline-block w-full;
+}
+
+.fitting-header {
+  @apply flex justify-between p-3 bg-[#fbd006] font-semibold rounded-t-md border border-gray-300;
+}
+
+.fitting-item {
+  @apply flex justify-between gap-2 py-3 pl-2 pr-4;
+}
+
+.fittings-filter {
+  @apply relative;
+
+  .filter-icon {
+    @apply absolute top-[14px] left-[10px];
+  }
+
+  .clear-icon {
+    @apply absolute top-[13px] right-[10px] cursor-pointer;
+  }
+  .fittings-filter-input {
+    @apply pl-10 pr-3 min-h-[48px] w-full md:min-w-[375px] rounded-md border border-[#9a9a9a] focus-visible:outline-[#2684ff];
+  }
+}
+
+.fitting-content {
+  @apply rounded-b-md border-b border-x border-gray-300;
+
+  .in-cart {
+    @apply bg-yellow-100;
+  }
+
+  .in-cart .fitting-qty {
+    @apply bg-yellow-100;
+  }
+  .alt-even .fitting-qty {
+    @apply bg-gray-200;
+  }
+  .alt-odd .fitting-qty {
+    @apply bg-gray-100;
+  }
+}
+
+.fitting-qty {
+  @apply flex items-center;
+
+  input {
+    @apply w-[45px] min-h-[42px] text-center border border-gray-400 focus:outline-none;
+  }
+
+  .increase-qty-btn,
+  .decrease-qty-btn {
+    @apply min-w-[34px] min-h-[42px] flex items-center justify-center bg-white border-y border-gray-400 cursor-pointer;
+  }
+
+  .increase-qty-btn {
+    @apply border-r border-gray-400 rounded-tr-md rounded-br-md;
+  }
+  .decrease-qty-btn {
+    @apply border-l border-gray-400 rounded-tl-md rounded-bl-md;
+  }
+}
+
+.fitting-tooltip {
+  background-color: white !important;
+  color: black !important;
+  opacity: 1 !important;
+  border: 1px solid #00000038 !important;
+}

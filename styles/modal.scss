@@ -1,0 +1,46 @@
+.job-pack-actions,
+.remove-cart-item {
+  padding: 0px !important;
+
+  @apply rounded-md w-[45%];
+
+  .title-wrapper {
+    @apply px-5 py-3 flex justify-between items-center bg-[#fbd006] border-b border-b-gray-300;
+  }
+
+  .title {
+    @apply w-full flex gap-3 items-center;
+  }
+
+  .content {
+    @apply p-5;
+  }
+
+  .btns-wrapper {
+    @apply flex flex-row gap-5;
+  }
+
+  .cancel-btn,
+  .ok-btn {
+    @apply min-w-[100px] py-2 text-white rounded-lg;
+  }
+
+  .cancel-btn {
+    @apply bg-[#dc3545] hover:bg-[#c42e3c];
+  }
+  .ok-btn {
+    @apply bg-[#007bff] hover:bg-[#0373eb];
+  }
+
+  .input-list-name {
+    @apply p-2 min-h-[38px] rounded-md w-full border border-gray-600 mt-5 focus-visible:outline-[#2684ff];
+  }
+}
+
+.email-sent-notifier {
+  transition: visibility 1000ms linear 200ms, opacity 2000ms;
+  height: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}

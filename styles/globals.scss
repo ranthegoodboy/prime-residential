@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./header.scss";
+@import "./fittings.scss";
+@import "./cart.scss";
+@import "./job-packs.scss";
+@import "./modal.scss";
+@import "./credit-application.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.boxed-container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.blue-btn,
+.red-btn,
+.green-btn {
+  @apply flex px-6 items-center gap-2 text-white min-w-max min-h-[48px] rounded-md cursor-pointer;
+}
+
+.blue-btn,
+.red-btn,
+.green-btn {
+  @apply min-w-max flex justify-center;
+}
+
+.blue-btn {
+  @apply bg-[#007bff] hover:bg-[#0373eb];
+}
+
+.red-btn {
+  @apply bg-[#dc3545] hover:bg-[#c42e3c];
+}
+
+.green-btn {
+  @apply bg-[#149614] hover:bg-[#18b018];
+}
+
+.disabled-btn {
+  @apply pointer-events-none opacity-[.5];
+}
+
+.alt-even {
+  @apply bg-gray-200;
+}
+.alt-odd {
+  @apply bg-gray-100;
+}
+
+.disabled-btn {
+  @apply pointer-events-none opacity-70;
+}
+
+//fix for modal flickering on close
+.react-responsive-modal-overlay,
+.react-responsive-modal-container,
+.react-responsive-modal-modal {
+  animation-fill-mode: forwards !important;
+}

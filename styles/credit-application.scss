@@ -1,0 +1,33 @@
+#credit-application {
+  @apply min-h-[75vh];
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    @apply px-5 py-2 border border-gray-400 focus-visible:outline-[#2684ff];
+  }
+
+  .row-wrapper {
+    @apply flex flex-col md:flex-row gap-5 justify-between;
+  }
+
+  .form-radio-wrap {
+    @apply flex items-center;
+  }
+}
+
+.step-status-wrapper {
+  @apply flex flex-row gap-5 items-center;
+}
+
+.circle-status {
+  @apply flex justify-center items-center w-[40px] h-[40px] rounded-full font-semibold;
+}
+
+.form-nav-btn {
+  @apply bg-[#007bff] hover:bg-[#0373eb] min-w-[200px] min-h-[48px] flex items-center gap-2 text-white justify-center cursor-pointer rounded-md;
+}
+
+.form-check-label {
+  @apply cursor-pointer;
+}
