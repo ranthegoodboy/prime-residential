@@ -1,23 +1,23 @@
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
+import Agreement from "../components/credit-application/Agreement";
+import BusinessAndCreditInfo from "../components/credit-application/BusinessAndCreditInfo";
+import BusinessContactInfo from "../components/credit-application/BusinessContactInfo";
+import BusinessReferences from "../components/credit-application/BusinessReferences";
+import SubmitSuccess from "../components/credit-application/SubmitSuccess";
+import { creditApplicationStepsMap } from "../constants/credit-application-map";
+import formDataFormatter from "../helper/form-data-formatter";
 import {
+  getActiveStepFields,
   goToNextStep,
   goToPrevStep,
-  getActiveStepFields,
   isFirstStepActive,
   isLastStepActive,
   setActiveStep,
 } from "../helper/utils";
-import BusinessContactInfo from "../components/credit-application/BusinessContactInfo";
-import BusinessAndCreditInfo from "../components/credit-application/BusinessAndCreditInfo";
-import BusinessReferences from "../components/credit-application/BusinessReferences";
-import Agreement from "../components/credit-application/Agreement";
-import SubmitSuccess from "../components/credit-application/SubmitSuccess";
-import formDataFormatter from "../helper/form-data-formatter";
-import { creditApplicationStepsMap } from "../constants/credit-application-map";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const CreditApplication = () => {
   const [steps, setSteps] = useState(creditApplicationStepsMap);
@@ -114,7 +114,7 @@ const CreditApplication = () => {
                 steps={steps}
               />
               <Agreement register={register} errors={errors} steps={steps} />
-              <div className="flex gap-3 py-20 justify-end">
+              <div className="flex justify-end gap-3 py-20">
                 <div
                   className={`${isFirstStepActive(steps) ? "hidden" : "block"}`}
                 >
@@ -150,7 +150,7 @@ const CreditApplication = () => {
                 >
                   <button className="form-nav-btn" type="Submit">
                     {isLoading ? (
-                      <div className="flex gap-2 items-center">
+                      <div className="flex items-center gap-2">
                         <FontAwesomeIcon
                           icon={faSpinner}
                           size={"lg"}
@@ -159,7 +159,7 @@ const CreditApplication = () => {
                         Submitting
                       </div>
                     ) : (
-                      <div className="flex gap-2 items-center">Submit</div>
+                      <div className="flex items-center gap-2">Submit</div>
                     )}
                   </button>
                 </div>
